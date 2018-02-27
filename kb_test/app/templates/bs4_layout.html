@@ -1,0 +1,23 @@
+{% extends "base_layout.html" %}
+{% block page_head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{ block.super }}
+{% endblock %}
+{% block page_content %}
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url "site_root" %}">kb_test</a>
+      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault"></div>
+    </nav>
+    <main class="container">
+    {% block content %}
+    {% endblock %}
+    </main>
+    {{ block.super }}
+{% endblock %}
